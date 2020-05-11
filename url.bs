@@ -2475,21 +2475,18 @@ then runs these steps, returning an <a>ASCII string</a>:
   <p>Otherwise:
 
   <ol>
-   <li><p>Let <var>path</var> be a <a for=list>clone</a> of <var>url</var>'s <a for=url>path</a>.
+   <li><p>If <var>url</var>'s <a for=url>host</a> is null, <var>url</var>'s <a for=url>path</a>'s
+   <a for=list>size</a> is greater than 1, and <var>url</var>'s <a for=url>path</a>[0] is the empty
+   string, then append U+002F (/) followed by U+002E (.) to <var>output</var>.
 
-   <li><p>If <var>url</var>'s <a for=url>host</a> is null, <var>path</var>'s <a for=list>size</a> is
-   greater than 1, and <var>path</var>[0] is the empty string, then append U+002F (/) followed by
-   U+002E (.) to <var>output</var> and <a for=list>remove</a> <var>path</var>[0] from
-   <var>path</var>.
-
-   <li><p><a for=list>For each</a> <var>segment</var> of <var>path</var>: append U+002F (/) followed
-   by <var>segment</var> to <var>output</var>.
+   <li><p><a for=list>For each</a> <var>segment</var> of <var>url</var>'s <a for=url>path</a>:
+   append U+002F (/) followed by <var>segment</var> to <var>output</var>.
   </ol>
 
-  <p class=note>This prevents <code>web+demo:/./not-a-host/</code> or
+  <p class=note>This prevents <code>web+demo:/.//not-a-host/</code> or
   <code>web+demo:/path/..//not-a-host/</code>, when <a lt="URL parser">parsed</a> and then
   <a lt="URL serializer">serialized</a>, from ending up as <code>web+demo://not-a-host/</code> (they
-  end up as <code>web+demo:/./not-a-host/</code>).
+  end up as <code>web+demo:/.//not-a-host/</code>).
 
  <li><p>If <var>url</var>'s <a for=url>query</a> is non-null, append
  U+003F (?), followed by <var>url</var>'s <a for=url>query</a>, to
