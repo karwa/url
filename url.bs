@@ -191,8 +191,8 @@ U+005B ([) to U+005E (^), inclusive, and U+007C (|).
 <p>The <dfn export>component percent-encode set</dfn> is the <a>userinfo percent-encode set</a> and
 U+0024 ($) to U+0026 (&amp;), inclusive, U+002B (+), and U+002C (,).
 
-<p class=note>This is used by the <cite>HTML standard</cite> for
-{{NavigatorContentUtils/registerProtocolHandler()}} and could also be used by other standards to
+<p class=note>This is used by <cite>HTML</cite> for
+{{NavigatorContentUtils/registerProtocolHandler()}}, and could also be used by other standards to
 percent-encode data that can then be embedded in a <a for=/>URL</a>'s <a for=url>path</a>,
 <a for=url>query</a>, or <a for=url>fragment</a>. Using it with
 <a for=string>UTF-8 percent-encode</a> gives identical results to JavaScript's
@@ -2526,8 +2526,8 @@ then runs these steps, returning an <a>ASCII string</a>:
 <h3 id=origin>Origin</h3>
 <!-- Still need to watch the final bits -->
 
-<p class=note>See <a for=/>origin</a>'s definition in HTML for the necessary
-background information. [[!HTML]]
+<p class=note>See <a for=/>origin</a>'s definition in <cite>HTML</cite> for the necessary background
+information. [[HTML]]
 
 <p>A <a for=/>URL</a>'s <dfn export for=url id=concept-url-origin>origin</dfn> is the
 <a for=/>origin</a> returned by running these steps, switching on
@@ -2801,8 +2801,7 @@ takes a list of name-value tuples <var>tuples</var>, optionally with an <a for=/
  <li>Return <var>output</var>.
 </ol>
 
-<p class="note no-backref">The <cite>HTML standard</cite> invokes this algorithm with values that
-are files. [[HTML]]
+<p class=note><cite>HTML</cite> invokes this algorithm with values that are files. [[HTML]]
 
 
 <h3 id=urlencoded-hooks>Hooks</h3>
@@ -3362,8 +3361,8 @@ such a feature "url" (i.e., lowercase and with an "l" at the end). Names such as
 "IRI" should not be used. However, if the name is a compound, "URL" (i.e., uppercase) is preferred,
 e.g., "newURL" and "oldURL".
 
-<p class=note>The {{EventSource}} and {{HashChangeEvent}} interfaces in HTML are examples of proper
-naming. [[!HTML]]
+<p class=note>The {{EventSource}} and {{HashChangeEvent}} interfaces in <cite>HTML</cite> are
+examples of proper naming. [[!HTML]]
 
 
 
