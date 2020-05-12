@@ -7,9 +7,8 @@ Abstract: The URL Standard defines URLs, domains, IP addresses, the <code>applic
 Translation: ja https://triple-underscore.github.io/URL-ja.html
 </pre>
 
-<!-- TODO: remove after Bikeshed database updates itself to no longer have url version -->
-<pre class=link-defaults>
-spec:html; type:dfn; text:same site
+<pre class=anchors>
+url: https://tc39.es/ecma262/#sec-encodeuricomponent-uricomponent; text: encodeURIComponent(); type: method; spec: ECMA-262
 </pre>
 
 
@@ -188,6 +187,16 @@ U+0020 SPACE, U+0022 ("), U+003C (&lt;), U+003E (&gt;), and U+0060 (`).
 <p>The <dfn oldids=userinfo-encode-set>userinfo percent-encode set</dfn> is the
 <a>path percent-encode set</a> and U+002F (/), U+003A (:), U+003B (;), U+003D (=), U+0040 (@),
 U+005B ([) to U+005E (^), inclusive, and U+007C (|).
+
+<p>The <dfn export>component percent-encode set</dfn> is the <a>userinfo percent-encode set</a> and
+U+0024 ($) to U+0026 (&amp;), inclusive, U+002B (+), and U+002C (,).
+
+<p class=note>This is used by the <cite>HTML standard</cite> for
+{{NavigatorContentUtils/registerProtocolHandler()}} and could also be used by other standards to
+percent-encode data that can then be embedded in a <a for=/>URL</a>'s <a for=url>path</a>,
+<a for=url>query</a>, or <a for=url>fragment</a>. Using it with
+<a for=string>UTF-8 percent-encode</a> gives identical results to JavaScript's
+<a><code>encodeURIComponent()</code></a> [sic]. [[HTML]] [[ECMA-262]]
 
 <p class=note>The <a><code>application/x-www-form-urlencoded</code></a> format's
 <a lt="urlencoded byte serializer">byte serializer</a> and the <a>URL parser</a>'s
