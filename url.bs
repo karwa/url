@@ -2601,6 +2601,8 @@ information. [[HTML]]
    <a for=/>URL</a>'s <a for=url>blob URL entry</a>'s <a for="blob URL entry">environment</a>'s
    <a for="environment settings object">origin</a>.
 
+   <li>If <a for=/>URL</a>'s <a for=url>cannot-be-a-base-URL</a> is false, then return a new <a>opaque origin</a>.
+
    <li><p>Let <var>url</var> be the result of <a lt="basic URL parser">parsing</a>
    <a for=/>URL</a>'s <a for=url>path</a>[0].
 
@@ -3439,6 +3441,7 @@ Jeffrey Yasskin,
 Joe Duarte,
 Joshua Bell,
 Jxck,
+Karl Wagner,
 田村健人 (Kent TAMURA),
 Kevin Grandon,
 Kornel Lesiński,
